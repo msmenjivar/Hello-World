@@ -1,15 +1,25 @@
 package main;
 
+import main.lemonadestand.LemonJuice;
+import main.lemonadestand.Lemonade;
+import main.lemonadestand.Sugar;
+import main.lemonadestand.Water;
+
 public class Main {
 
 	public static void main(String[] args) {
 		
-		// Invoking the add method with 2 arguments.
-		System.out.println(add(1, 5));
+		int x = 5;
 		
-		System.out.println(concat("Hello ", "World!"));
+		String hello = "hello World";
 		
-		System.out.println(divide(6, 0));
+		LemonJuice lemonJuice = new LemonJuice(5, "ounces");
+		Sugar sugar = new Sugar(12, "tsp");
+		Water water = new Water(3, "cups");
+		
+		Lemonade lemonade = new Lemonade(lemonJuice, sugar, water);
+		
+		System.out.println(lemonade.getWater());
 		
 	}// end main.
 	
